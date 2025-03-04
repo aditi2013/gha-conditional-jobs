@@ -17,7 +17,7 @@ on:
 jobs:
   deploy:
     outputs:
-      outcome: ${{ steps.set-result.outputs.steps-output }}
+      outcome: ${{ steps.set-result.outputs.step-result }}
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -31,4 +31,3 @@ jobs:
       - name: Set Result output
         id: set-result
         run: echo "::set-output name=step-result::success"
-
